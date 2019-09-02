@@ -18,3 +18,5 @@ def is_simple(number):
 rez = is_simple(600851475143)
 print(max(rez))
 
+fin = round(600851475143 ** 0.5)
+
