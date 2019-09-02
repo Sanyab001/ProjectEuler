@@ -19,7 +19,7 @@ def check_devision(n):
 # Будем проверять числа с шагом +10
 def l_number():
     s = False
-    num = 232792520
+    num = 20
     while s != 1:
         ck = str(num)
         if ck[-1] == str(0):
@@ -29,4 +29,6 @@ def l_number():
             else:
                 num += 10
 
+
+l_number()
 # Ответ 232792560
