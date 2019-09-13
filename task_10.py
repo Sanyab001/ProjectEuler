@@ -19,10 +19,19 @@ def is_simple(number):
                 False
 
 
-sum = 0
-for i in range(2, 2000):
-    if is_simple(i) == True:
-        sum += i
-print(sum)
+def eratosthenes(n):  # Конечное число списка
+    simple = list(range(n + 1))
+    simple[1] = 0
+    for i in simple:
+        if i > 0:
+            for j in range(i + i, len(simple), i):
+                simple[j] = 0
+    return simple
 
-# Способ очень долгий, переделать
+
+result = 0
+for n in eratosthenes(2000000):
+    result += n
+
+print(result)
+# Ответ 142913828922
